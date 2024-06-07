@@ -206,11 +206,23 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 --------------------------------------*/
 .welcome-hero {
     position: relative;
-    background:url(/assets/images/welcome-hero/smilo.jpg)no-repeat;
+    /* background:url(/assets/images/welcome-hero/milo.jpg)no-repeat; */
     background-position: center;
     background-size: cover;
     z-index: 1;
 }
+
+#home{
+    overflow: hidden;
+}
+
+#img{
+    z-index: -1;
+    position: absolute;
+    transform: translateY(-350px);
+width: 100%;
+}
+
 .welcome-hero:before {
     position: absolute;
     content: "";
