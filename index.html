@@ -1,729 +1,1049 @@
-/*==================================
-* Author        : "ThemeSine"
-* Template Name : CarVilla  HTML Template
-* Version       : 1.0
-==================================== */
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <!-- meta data -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-/*==================================
-font-family: 'Poppins', sans-serif;
-font-family: 'Rufina', serif;
-==================================== */
+    <!--font-family-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
 
+    <link
+      href="https://fonts.googleapis.com/css?family=Rufina:400,700"
+      rel="stylesheet"
+    />
 
-/*=========== TABLE OF CONTENTS ===========
-1.  General css (Reset code)
-2.  Top-area
-3.  Welcome-hero
-4.  Model-search
-5.  Service
-6.  New-cars
-7.  Featured-cars
-8.  Client-say
-9.  Brand
-10. Blog
-11. Contact
-==========================================*/
+    <!-- title of site -->
+    <title>T-SHIRT HUB</title>
 
-/*-------------------------------------
-		1.General css (Reset code)
---------------------------------------*/
-*{
-    padding: 0;
-    margin: 0;
-}
+    <!-- For favicon png -->
+    <link
+      rel="shortcut icon"
+      type="image/icon"
+      href="assets/logo/favicon.png"
+    />
 
-*{
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-o-box-sizing:border-box;
-	-ms-box-sizing:border-box;
-	box-sizing:border-box;
-}
-body{
-	font-family: 'Poppins', sans-serif;
-	font-size:16px;
-	color:#818998;
-    text-transform:initial;
-    max-width:1920px;
-    margin:0 auto;
-	overflow-x:hidden;
-}
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
 
-a,a:hover,a:active,a:focus {
-	display:inline-block;
-	text-decoration:none;
-	color: #444a57;
-	font-size:20px;
-	padding:0;
-    font-weight: 500;
-    text-transform: capitalize;
-}
-h1,h2,h3,h4,h5,h6 { 
-	margin: 0;
-	color:#444a57;
-    font-size: 20px;
-    font-weight: 500;
-    text-transform: capitalize;
-}
-p {
-	margin: 0;
-	color:#818998;
-	font-size:16px;
-    line-height: 1.8;
-    text-transform: initial;
-}
-img{border:none;max-width:100%; height:auto;}
-ul{
-	padding: 0;
-    margin: 0 auto;
-    list-style: none;
-}
-ul li {
-	list-style: none;
-    display: inline-block;
-	
-}
-select,input,textarea,button,.form-control{box-shadow:none;outline:0!important;}
-button {background: transparent;border: 0;font-size: 16px;text-transform: capitalize;}
+    <!--linear icon css-->
+    <link rel="stylesheet" href="assets/css/linearicons.css" />
 
-html,body{height: 100%;}
+    <!--flaticon.css-->
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
 
-[placeholder]:focus::-webkit-input-placeholder {
-  -webkit-transition: opacity 0.3s 0.3s ease; 
-  -moz-transition: opacity 0.3s 0.3s ease; 
-  -ms-transition: opacity 0.3s 0.3s ease; 
-  -o-transition: opacity 0.3s 0.3s ease; 
-  transition: opacity 0.3s 0.3s ease; 
-  opacity: 0;
-}
-.owl-carousel {z-index: 0;}
-/* section-header */
-.section-header{
-    position: relative;
-    text-align: center;
-}
-.section-header h2{
-    position: relative;
-    font-size: 36px;
-    font-weight: 500;
-    padding-bottom: 35px;
-}
-.section-header h2:before {
-    position: absolute;
-    content: "";
-    width: 80px;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    margin-left: -42px;
-    background: #4e4ffa;
-}
-.section-header p{color: #444a57;text-transform: capitalize;margin-bottom:10px;}
-.section-header h2 span,.section-header p span{text-transform: lowercase;}
+    <!--animate.css-->
+    <link rel="stylesheet" href="assets/css/animate.css" />
 
-/* section-header */
+    <!--owl.carousel.css-->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
 
-/*=============Style css=========*/
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="assets/css/bootsnav.css" />
 
-/*-------------------------------------
-        2. Top-area
---------------------------------------*/
-nav.navbar.bootsnav {
-    background-color: transparent;
-    border-bottom: transparent;
-}
-.wrap-sticky nav.navbar.bootsnav.sticked {background-color: #000;box-shadow: 0 2px 5px rgba(0,0,0,.2);}
+    <!--style.css-->
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-/*.navbar-brand*/
-.navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus{
-    display: inline-block;
-    color: #fff;
-    font-size: 24px;
-    letter-spacing: 3px;
-    font-family: 'Rufina', serif;
-    font-weight: 700;
-    padding: 45px 0px;
-    text-transform:uppercase;
-}
-.navbar-header a.navbar-brand span{display: inline-block;color:#4e4ffa;text-transform:capitalize;}
+    <!--responsive.css-->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
 
-.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:hover,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:focus {padding:30px 0px;}
-/*.navbar-brand*/
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 
-/*.nav li*/
-nav.navbar.bootsnav ul.nav > li > a {
-    color: #f5f7fa;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform:uppercase;
-    -webkit-transition: 0.3s linear; 
-    -moz-transition: 0.3s linear; 
-    -ms-transition: 0.3s linear; 
-    -o-transition: 0.3s linear; 
-    transition: 0.3s linear;
-}
-nav.navbar.bootsnav ul.nav > li > a {padding: 48px 21px;}
-nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus{color:#4e4ffa;}
-nav.navbar.bootsnav ul.nav > li.active>a {color: #4e4ffa;}
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
-    content: "";
-}
-nav.navbar.bootsnav ul.nav > li.dropdown span {
-    font-size: 8px;
-    margin-left: 15px;
-}
-.wrap-sticky nav.navbar.bootsnav.sticked ul.nav > li > a{padding:30px 25px;}
-/*.nav li*/
+  <body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
 
-/*.menu-ui-design*/
-.menu-ui-design{overflow-y:scroll;height: 350px;}
-.menu-ui-design::-webkit-scrollbar {
-    width:5px;
-}
-.menu-ui-design::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 8px #000;
-}
-.menu-ui-design::-webkit-scrollbar-thumb {
-  background-color: #4e4ffa;
-}
-/*.menu-ui-design*/
+    <!--welcome-hero start -->
+    <section id="home" class="welcome-hero">
+      <!-- top-area Start -->
+      <img id="img" src="/assets/images/welcome-hero/milo.jpg" />
+      <div class="top-area">
+        <div class="header-area">
+          <!-- Start Navigation -->
+          <nav
+            class="navbar navbar-default bootsnav navbar-sticky navbar-scrollspy"
+            data-minus-value-desktop="70"
+            data-minus-value-mobile="55"
+            data-speed="1000"
+          >
+            <div class="container">
+              <!-- Start Header Navigation -->
+              <div class="navbar-header">
+                <button
+                  type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target="#navbar-menu"
+                >
+                  <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html"
+                  >T-SHIRT HUB<span></span
+                ></a>
+              </div>
+              <!--/.navbar-header-->
+              <!-- End Header Navigation -->
 
-/*.navbar-toggle */
-nav.navbar.bootsnav .navbar-toggle {
-    position: relative;
-    background-color: transparent;
-    border: 1px solid #4e4ffa;
-    padding: 10px;
-    top: 0;
-}
-nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
-/*.navbar-toggle */
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div
+                class="collapse navbar-collapse menu-ui-design"
+                id="navbar-menu"
+              >
+                <ul
+                  class="nav navbar-nav navbar-right"
+                  data-in="fadeInDown"
+                  data-out="fadeOutUp"
+                >
+                  <li class="scroll active"><a href="#home">home</a></li>
+                  <!-- <li class="scroll"><a href="#service">service</a></li> -->
+                  <!-- <li class="scroll">
+                    <a href="#featured-cars">featured PRODUCTS</a>
+                  </li>
+                  <li class="scroll"><a href="#new-cars">new cars</a></li>
+                  <li class="scroll"><a href="#brand">brands</a></li> 
+                  <li class="scroll"><a href="#contact">contact</a></li>-->
+                </ul>
+                <!--/.nav -->
+              </div>
+              <!-- /.navbar-collapse -->
+            </div>
+            <!--/.container-->
+          </nav>
+          <!--/nav-->
+          <!-- End Navigation -->
+        </div>
+        <!--/.header-area-->
+        <div class="clearfix"></div>
+      </div>
+      <!-- /.top-area-->
+      <!-- top-area End -->
 
-/*-------------------------------------
-        3.  Welcome-hero
---------------------------------------*/
-.welcome-hero {
-    position: relative;
-    /* background:url(/assets/images/welcome-hero/milo.jpg)no-repeat; */
-    background-position: center;
-    background-size: cover;
-    z-index: 1;
-}
+      <div class="container">
+        <div class="welcome-hero-txt">
+          <h2>COMING SOON!</h2>
+          <p>
+            T-Shirt Hub is happy to announce a new drop coming soon. Our new
+            collection T-shirts, hoodies and various designs to chose from.
+          </p>
+          <button class="welcome-btn" onclick="window.location.href='#'">
+            COMING SOON
+          </button>
+        </div>
+      </div>
 
-#home{
-    overflow: hidden;
-}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 hideDivs">
+            <div class="model-search-content">
+              <div class="row">
+                <div class="col-md-offset-1 col-md-2 col-sm-12">
+                  <div class="single-model-search">
+                    <h2>select year</h2>
+                    <div class="model-select-icon">
+                      <select class="form-control">
+                        <option value="default">year</option>
+                        <!-- /.option-->
 
-#img{
-    z-index: -1;
-    position: absolute;
-    transform: translateY(-350px);
-width: 100%;
-}
+                        <option value="2018">2018</option>
+                        <!-- /.option-->
 
-.welcome-hero:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(42,45,84,.60);
-}
-.header-area{position: absolute;top:0;left:0;width: 100%;z-index: 99;}
+                        <option value="2017">2017</option>
+                        <!-- /.option-->
+                        <option value="2016">2016</option>
+                        <!-- /.option--></select
+                      ><!-- /.select-->
+                    </div>
+                    <!-- /.model-select-icon -->
+                  </div>
+                  <div class="single-model-search">
+                    <h2>body style</h2>
+                    <div class="model-select-icon">
+                      <select class="form-control">
+                        <option value="default">style</option>
+                        <!-- /.option-->
 
-/*.welcome-hero-txt*/
-.welcome-hero-txt{text-align: center;padding:290px 0 372px;}
-.welcome-hero-txt h2 {
-    font-size: 42px;
-    color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 45px;
-}
-.welcome-hero-txt p {
-    font-size: 18px;
-    text-transform: initial;
-    color: #fff;
-    font-weight: 500;
-    max-width: 735px;
-    margin: 0 auto;
-}
-.welcome-btn {
-    display: inline-block;
-    width: 230px;
-    height: 60px;
-    background: #4e4ffa;
-    color: #fff;
-    border-radius: 3px;
-    margin-top: 55px;
-    -webkit-transition: .3s linear; 
-    -moz-transition:.3s linear; 
-    -ms-transition:.3s linear; 
-    -o-transition:.3s linear;
-    transition: .3s linear;
-}
-.welcome-btn:hover{
-    background: #0102fa;
-}
-/*.welcome-hero-txt*/
+                        <option value="sedan">sedan</option>
+                        <!-- /.option-->
 
-/*-------------------------------------
-        4. Model-Search
---------------------------------------*/
-.model-search-content .col-sm-12 {padding: 0;}
-.model-search-content {
-    padding: 40px 0;
-    background: #fff;
-    box-shadow:0 10px 40px 0px rgba(38,40,64,.2);
-    position: absolute;
-    bottom: -150px;
-    width: 100%;
-    border-radius: 3px;
-}
+                        <option value="van">van</option>
+                        <!-- /.option-->
+                        <option value="roadster">roadster</option>
+                        <!-- /.option--></select
+                      ><!-- /.select-->
+                    </div>
+                    <!-- /.model-select-icon -->
+                  </div>
+                </div>
+                <div class="col-md-offset-1 col-md-2 col-sm-12">
+                  <div class="single-model-search">
+                    <h2>select make</h2>
+                    <div class="model-select-icon">
+                      <select class="form-control">
+                        <option value="default">make</option>
+                        <!-- /.option-->
 
-/*.single-model-search*/
-.single-model-search{margin-bottom: 30px;}
-.single-model-search:last-child {margin-bottom: 0;}
+                        <option value="toyota">toyota</option>
+                        <!-- /.option-->
 
-.single-model-search h2 {
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-}
-/*model-select-icon*/
-.model-select-icon{
-    position:relative;
-}
-.model-select-icon .form-control {
-    outline: 0!important;
-    box-shadow: none;
-    border: 1px solid #f8f8f8;
-    background: #f8f8f8;
-    height: 60px;
-}
-.model-select-icon select {
-    font-size: 16px;
-    color: #888f9d;
-    text-transform: capitalize;
-}
-.model-select-icon:after{
-    position: absolute;
-    content: "\f103";
-    right: 0px;
-    top: 0;
-    font-size: 10px;
-    color: #888f9d;
-    background: #f8f8f8;
-    height: 60px;
-    line-height: 60px;
-    width: 50px;
-    text-align: center;
-    font-family: "Flaticon";
-    pointer-events: none;
-    border: transparent;
-}/*model-select-icon*/
-.welcome-btn.model-search-btn {
-    width: 160px;
-    margin-top: 80px;
-    margin-left: 53px;
-}
+                        <option value="holden">holden</option>
+                        <!-- /.option-->
+                        <option value="maecedes-benz">maecedes-benz.</option>
+                        <!-- /.option--></select
+                      ><!-- /.select-->
+                    </div>
+                    <!-- /.model-select-icon -->
+                  </div>
+                  <div class="single-model-search">
+                    <h2>car condition</h2>
+                    <div class="model-select-icon">
+                      <select class="form-control">
+                        <option value="default">condition</option>
+                        <!-- /.option-->
 
-/*.single-model-search*/
+                        <option value="something">something</option>
+                        <!-- /.option-->
 
-/*-------------------------------------
-        5. Service 
---------------------------------------*/
-.service { padding: 260px 0 87px;}
+                        <option value="something">something</option>
+                        <!-- /.option-->
+                        <option value="something">something</option>
+                        <!-- /.option--></select
+                      ><!-- /.select-->
+                    </div>
+                    <!-- /.model-select-icon -->
+                  </div>
+                </div>
+                <div class="col-md-offset-1 col-md-2 col-sm-12">
+                  <div class="single-model-search">
+                    <h2>select model</h2>
+                    <div class="model-select-icon">
+                      <select class="form-control">
+                        <option value="default">model</option>
+                        <!-- /.option-->
 
-.single-service-item{
-    text-align: center;
-    padding:55px 30px 60px;
-    border-radius: 3px;
-    margin-bottom: 30px;
-    border: 1px solid #dadfe9;
-    -webkit-transition: .3s linear; 
-    -moz-transition:.3s linear; 
-    -ms-transition:.3s linear; 
-    -o-transition:.3s linear;
-    transition: .3s linear;
-}
+                        <option value="kia-rio">kia-rio</option>
+                        <!-- /.option-->
 
-.single-service-icon {
-    display: inline-block;
-    color: #50616c;
-}
-.single-service-item h2 a {
-    font-size:20px;
-    margin: 35px 0 20px;
-}
-.single-service-item h2 a span {text-transform:  lowercase;}
-.single-service-item p {padding-bottom: 35px;text-transform: initial;position: relative;}
-.single-service-item p:before {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 3px;
-    background: #3030ea;
-    bottom: 0;
-    left: 50%;
-    margin-left: -10px;
-}
+                        <option value="mitsubishi">mitsubishi</option>
+                        <!-- /.option-->
+                        <option value="ford">ford</option>
+                        <!-- /.option--></select
+                      ><!-- /.select-->
+                    </div>
+                    <!-- /.model-select-icon -->
+                  </div>
+                  <div class="single-model-search">
+                    <h2>select price</h2>
+                    <div class="model-select-icon">
+                      <select class="form-control">
+                        <option value="default">price</option>
+                        <!-- /.option-->
 
-.single-service-icon [class^="flaticon-"]:before,.single-service-icon[class*=" flaticon-"]:before,.single-service-icon [class^="flaticon-"]:after,.single-service-icon [class*=" flaticon-"]:after {font-size:60px;}
-.single-service-item:hover .single-service-icon [class^="flaticon-"]:before,.single-service-item:hover .single-service-icon [class*=" flaticon-"]:before,.single-service-item:hover .single-service-icon [class^="flaticon-"]:after,.single-service-item:hover .single-service-icon [class*=" flaticon-"]:after {color:#fff;}
+                        <option value="$0.00">$0.00</option>
+                        <!-- /.option-->
 
+                        <option value="$0.00">$0.00</option>
+                        <!-- /.option-->
+                        <option value="$0.00">$0.00</option>
+                        <!-- /.option--></select
+                      ><!-- /.select-->
+                    </div>
+                    <!-- /.model-select-icon -->
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                  <div class="single-model-search text-center">
+                    <button
+                      class="welcome-btn model-search-btn"
+                      onclick="window.location.href='#'"
+                    >
+                      search
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/.welcome-hero-->
+    <!--welcome-hero end -->
 
-.single-service-item:hover h2 a,.single-service-item:hover p{color: #fff;}
-.single-service-item:hover  p:before {background: #fff;}
-.single-service-item:hover{box-shadow: 0 12px 30px 0px rgba(0,1,193,.2);background: #4e4ffa;border: 1px solid #4e4ffa;}
+    <!--service start -->
+    <section id="service" class="service hideDivs">
+      <div class="container">
+        <div class="service-content">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="single-service-item">
+                <div class="single-service-icon">
+                  <i class="flaticon-car"></i>
+                </div>
+                <h2>
+                  <a href="#">largest dealership <span> of</span> car</a>
+                </h2>
+                <p>
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut den fugit sed quia.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="single-service-item">
+                <div class="single-service-icon">
+                  <i class="flaticon-car-repair"></i>
+                </div>
+                <h2><a href="#">unlimited repair warrenty</a></h2>
+                <p>
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut den fugit sed quia.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="single-service-item">
+                <div class="single-service-icon">
+                  <i class="flaticon-car-1"></i>
+                </div>
+                <h2><a href="#">insurence support</a></h2>
+                <p>
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut den fugit sed quia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.container-->
+    </section>
+    <!--/.service-->
+    <!--service end-->
 
+    <!--new-cars start -->
+    <section id="new-cars" class="new-cars hideDivs">
+      <div class="container">
+        <div class="section-header">
+          <p>checkout <span>the</span> latest cars</p>
+          <h2>newest cars</h2>
+        </div>
+        <!--/.section-header-->
+        <div class="new-cars-content">
+          <div class="owl-carousel owl-theme" id="new-cars-carousel">
+            <div class="new-cars-item">
+              <div class="single-new-cars-item">
+                <div class="row">
+                  <div class="col-md-7 col-sm-12">
+                    <div class="new-cars-img">
+                      <img
+                        src="assets/images/new-cars-model/ncm1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <!--/.new-cars-img-->
+                  </div>
+                  <div class="col-md-5 col-sm-12">
+                    <div class="new-cars-txt">
+                      <h2>
+                        <a href="#">chevrolet camaro <span> za100</span></a>
+                      </h2>
+                      <p>
+                        Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                      <p class="new-cars-para2">
+                        Sed ut pers unde omnis iste natus error sit voluptatem
+                        accusantium doloremque laudantium.
+                      </p>
+                      <button
+                        class="welcome-btn new-cars-btn"
+                        onclick="window.location.href='#'"
+                      >
+                        view details
+                      </button>
+                    </div>
+                    <!--/.new-cars-txt-->
+                  </div>
+                  <!--/.col-->
+                </div>
+                <!--/.row-->
+              </div>
+              <!--/.single-new-cars-item-->
+            </div>
+            <!--/.new-cars-item-->
+            <div class="new-cars-item">
+              <div class="single-new-cars-item">
+                <div class="row">
+                  <div class="col-md-7 col-sm-12">
+                    <div class="new-cars-img">
+                      <img
+                        src="assets/images/new-cars-model/ncm2.png"
+                        alt="img"
+                      />
+                    </div>
+                    <!--/.new-cars-img-->
+                  </div>
+                  <div class="col-md-5 col-sm-12">
+                    <div class="new-cars-txt">
+                      <h2><a href="#">BMW series-3 wagon</a></h2>
+                      <p>
+                        Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                      <p class="new-cars-para2">
+                        Sed ut pers unde omnis iste natus error sit voluptatem
+                        accusantium doloremque laudantium.
+                      </p>
+                      <button
+                        class="welcome-btn new-cars-btn"
+                        onclick="window.location.href='#'"
+                      >
+                        view details
+                      </button>
+                    </div>
+                    <!--/.new-cars-txt-->
+                  </div>
+                  <!--/.col-->
+                </div>
+                <!--/.row-->
+              </div>
+              <!--/.single-new-cars-item-->
+            </div>
+            <!--/.new-cars-item-->
+            <div class="new-cars-item">
+              <div class="single-new-cars-item">
+                <div class="row">
+                  <div class="col-md-7 col-sm-12">
+                    <div class="new-cars-img">
+                      <img
+                        src="assets/images/new-cars-model/ncm3.png"
+                        alt="img"
+                      />
+                    </div>
+                    <!--/.new-cars-img-->
+                  </div>
+                  <div class="col-md-5 col-sm-12">
+                    <div class="new-cars-txt">
+                      <h2><a href="#">ferrari 488 superfast</a></h2>
+                      <p>
+                        Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                      <p class="new-cars-para2">
+                        Sed ut pers unde omnis iste natus error sit voluptatem
+                        accusantium doloremque laudantium.
+                      </p>
+                      <button
+                        class="welcome-btn new-cars-btn"
+                        onclick="window.location.href='#'"
+                      >
+                        view details
+                      </button>
+                    </div>
+                    <!--/.new-cars-txt-->
+                  </div>
+                  <!--/.col-->
+                </div>
+                <!--/.row-->
+              </div>
+              <!--/.single-new-cars-item-->
+            </div>
+            <!--/.new-cars-item-->
+          </div>
+          <!--/#new-cars-carousel-->
+        </div>
+        <!--/.new-cars-content-->
+      </div>
+      <!--/.container-->
+    </section>
+    <!--/.new-cars-->
+    <!--new-cars end -->
 
-/*-------------------------------------
-        6. New-cars
---------------------------------------*/
-.new-cars{
-    background: #f8f9fb;
-    padding:112px 0 120px;
-}
-.new-cars-content{padding-top:96px;}
-/*.new-cars-txt*/
-.new-cars-txt {margin-left: 29px;margin-bottom: 30px;}
-.new-cars-txt h2 a {
-    font-size:  30px;
-    font-weight:  500;
-    margin-bottom: 26px;
-}
-.new-cars-txt h2 a span {text-transform:  uppercase;}
-.new-cars-para2 {margin-top: 30px;}
-.welcome-btn.new-cars-btn {
-    width: 176px;
-    margin-top: 32px;
-}
-/*.new-cars-txt*/
+    <!--featured-cars start -->
+    <section id="featured-cars" class="featured-cars hideDivs">
+      <div class="container">
+        <div class="section-header">
+          <p>checkout <span>the</span> featured cars</p>
+          <h2>featured cars</h2>
+        </div>
+        <!--/.section-header-->
+        <div class="featured-cars-content">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img src="assets/images/featured-cars/fc1.png" alt="cars" />
+                  </div>
+                  <div class="featured-model-info">
+                    <p>
+                      model: 2017
+                      <span class="featured-mi-span"> 3100 mi</span>
+                      <span class="featured-hp-span"> 240HP</span>
+                      automatic
+                    </p>
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2><a href="#">BMW 6-series gran coupe</a></h2>
+                  <h3>$89,395</h3>
+                  <p>
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                    amet, consectetur, adipisci velit, sed quia non.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img src="assets/images/featured-cars/fc2.png" alt="cars" />
+                  </div>
+                  <div class="featured-model-info">
+                    <p>
+                      model: 2017
+                      <span class="featured-mi-span"> 3100 mi</span>
+                      <span class="featured-hp-span"> 240HP</span>
+                      automatic
+                    </p>
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2>
+                    <a href="#">chevrolet camaro <span>wmv20</span></a>
+                  </h2>
+                  <h3>$66,575</h3>
+                  <p>
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                    amet, consectetur, adipisci velit, sed quia non.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img src="assets/images/featured-cars/fc3.png" alt="cars" />
+                  </div>
+                  <div class="featured-model-info">
+                    <p>
+                      model: 2017
+                      <span class="featured-mi-span"> 3100 mi</span>
+                      <span class="featured-hp-span"> 240HP</span>
+                      automatic
+                    </p>
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2>
+                    <a href="#">lamborghini <span>v520</span></a>
+                  </h2>
+                  <h3>$125,250</h3>
+                  <p>
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                    amet, consectetur, adipisci velit, sed quia non.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img src="assets/images/featured-cars/fc4.png" alt="cars" />
+                  </div>
+                  <div class="featured-model-info">
+                    <p>
+                      model: 2017
+                      <span class="featured-mi-span"> 3100 mi</span>
+                      <span class="featured-hp-span"> 240HP</span>
+                      automatic
+                    </p>
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2>
+                    <a href="#">audi <span> a3</span> sedan</a>
+                  </h2>
+                  <h3>$95,500</h3>
+                  <p>
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                    amet, consectetur, adipisci velit, sed quia non.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img src="assets/images/featured-cars/fc4.png" alt="cars" />
+                  </div>
+                  <div class="featured-model-info">
+                    <p>
+                      model: 2017
+                      <span class="featured-mi-span"> 3100 mi</span>
+                      <span class="featured-hp-span"> 240HP</span>
+                      automatic
+                    </p>
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2>
+                    <a href="#">infiniti <span>z5</span></a>
+                  </h2>
+                  <h3>$36,850</h3>
+                  <p>
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                    amet, consectetur, adipisci velit, sed quia non.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img src="assets/images/featured-cars/fc5.png" alt="cars" />
+                  </div>
+                  <div class="featured-model-info">
+                    <p>
+                      model: 2017
+                      <span class="featured-mi-span"> 3100 mi</span>
+                      <span class="featured-hp-span"> 240HP</span>
+                      automatic
+                    </p>
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2>
+                    <a href="#">porsche <span>718</span> cayman</a>
+                  </h2>
+                  <h3>$48,500</h3>
+                  <p>
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                    amet, consectetur, adipisci velit, sed quia non.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img src="assets/images/featured-cars/fc7.png" alt="cars" />
+                  </div>
+                  <div class="featured-model-info">
+                    <p>
+                      model: 2017
+                      <span class="featured-mi-span"> 3100 mi</span>
+                      <span class="featured-hp-span"> 240HP</span>
+                      automatic
+                    </p>
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2>
+                    <a href="#"><span>bmw 8-</span>series coupe</a>
+                  </h2>
+                  <h3>$56,000</h3>
+                  <p>
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                    amet, consectetur, adipisci velit, sed quia non.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img src="assets/images/featured-cars/fc8.png" alt="cars" />
+                  </div>
+                  <div class="featured-model-info">
+                    <p>
+                      model: 2017
+                      <span class="featured-mi-span"> 3100 mi</span>
+                      <span class="featured-hp-span"> 240HP</span>
+                      automatic
+                    </p>
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2>
+                    <a href="#">BMW <span> x</span>series-6</a>
+                  </h2>
+                  <h3>$75,800</h3>
+                  <p>
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                    amet, consectetur, adipisci velit, sed quia non.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.container-->
+    </section>
+    <!--/.featured-cars-->
+    <!--featured-cars end -->
 
-/*.owl-dots */
-.new-cars .owl-theme .owl-dots .owl-dot span {
-    width: 8px;
-    height: 8px;
-    margin: 0px 4px;
-    background: transparent;
-    border: 1px solid #6a7781;
-    border-radius: 50%;
-}
-.new-cars .owl-theme .owl-dots .owl-dot.active span,.new-cars .owl-theme .owl-dots .owl-dot:hover span {background: #6a7781;}
-.new-cars .owl-theme .owl-nav.disabled+.owl-dots {margin-top: 62px;}
-/*.owl-dots */
+    <!-- clients-say strat -->
+    <section id="clients-say" class="clients-say hideDivs">
+      <div class="container">
+        <div class="section-header">
+          <h2>what our clients say</h2>
+        </div>
+        <!--/.section-header-->
+        <div class="row">
+          <div class="owl-carousel testimonial-carousel">
+            <div class="col-sm-3 col-xs-12">
+              <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                  <div class="testimonial-info">
+                    <div class="testimonial-img">
+                      <img
+                        src="assets/images/clients/c1.png"
+                        alt="image of clients person"
+                      />
+                    </div>
+                    <!--/.testimonial-img-->
+                  </div>
+                  <!--/.testimonial-info-->
+                  <div class="testimonial-comment">
+                    <p>
+                      Sed ut pers unde omnis iste natus error sit voluptatem
+                      accusantium dolor laudan rem aperiam, eaque ipsa quae ab
+                      illo inventore verit.
+                    </p>
+                  </div>
+                  <!--/.testimonial-comment-->
+                  <div class="testimonial-person">
+                    <h2><a href="#">tomas lili</a></h2>
+                    <h4>new york</h4>
+                  </div>
+                  <!--/.testimonial-person-->
+                </div>
+                <!--/.testimonial-description-->
+              </div>
+              <!--/.single-testimonial-box-->
+            </div>
+            <!--/.col-->
+            <div class="col-sm-3 col-xs-12">
+              <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                  <div class="testimonial-info">
+                    <div class="testimonial-img">
+                      <img
+                        src="assets/images/clients/c2.png"
+                        alt="image of clients person"
+                      />
+                    </div>
+                    <!--/.testimonial-img-->
+                  </div>
+                  <!--/.testimonial-info-->
+                  <div class="testimonial-comment">
+                    <p>
+                      Sed ut pers unde omnis iste natus error sit voluptatem
+                      accusantium dolor laudan rem aperiam, eaque ipsa quae ab
+                      illo inventore verit.
+                    </p>
+                  </div>
+                  <!--/.testimonial-comment-->
+                  <div class="testimonial-person">
+                    <h2><a href="#">romi rain</a></h2>
+                    <h4>london</h4>
+                  </div>
+                  <!--/.testimonial-person-->
+                </div>
+                <!--/.testimonial-description-->
+              </div>
+              <!--/.single-testimonial-box-->
+            </div>
+            <!--/.col-->
+            <div class="col-sm-3 col-xs-12">
+              <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                  <div class="testimonial-info">
+                    <div class="testimonial-img">
+                      <img
+                        src="assets/images/clients/c3.png"
+                        alt="image of clients person"
+                      />
+                    </div>
+                    <!--/.testimonial-img-->
+                  </div>
+                  <!--/.testimonial-info-->
+                  <div class="testimonial-comment">
+                    <p>
+                      Sed ut pers unde omnis iste natus error sit voluptatem
+                      accusantium dolor laudan rem aperiam, eaque ipsa quae ab
+                      illo inventore verit.
+                    </p>
+                  </div>
+                  <!--/.testimonial-comment-->
+                  <div class="testimonial-person">
+                    <h2><a href="#">john doe</a></h2>
+                    <h4>washington</h4>
+                  </div>
+                  <!--/.testimonial-person-->
+                </div>
+                <!--/.testimonial-description-->
+              </div>
+              <!--/.single-testimonial-box-->
+            </div>
+            <!--/.col-->
+          </div>
+          <!--/.testimonial-carousel-->
+        </div>
+        <!--/.row-->
+      </div>
+      <!--/.container-->
+    </section>
+    <!--/.clients-say-->
+    <!-- clients-say end -->
 
-/*-------------------------------------
-        7. Featured-cars
---------------------------------------*/
-.featured-cars{
-    padding:112px 0 120px;
-}
-.featured-cars-content{padding-top:96px;}
+    <!--brand strat -->
+    <section id="brand" class="brand hideDivs">
+      <div class="container">
+        <div class="brand-area">
+          <div class="owl-carousel owl-theme brand-item">
+            <div class="item">
+              <a href="#">
+                <img src="assets/images/brand/br1.png" alt="brand-image" />
+              </a>
+            </div>
+            <!--/.item-->
+            <div class="item">
+              <a href="#">
+                <img src="assets/images/brand/br2.png" alt="brand-image" />
+              </a>
+            </div>
+            <!--/.item-->
+            <div class="item">
+              <a href="#">
+                <img src="assets/images/brand/br3.png" alt="brand-image" />
+              </a>
+            </div>
+            <!--/.item-->
+            <div class="item">
+              <a href="#">
+                <img src="assets/images/brand/br4.png" alt="brand-image" />
+              </a>
+            </div>
+            <!--/.item-->
 
-/*.single-featured-cars*/
-.featured-img-box {
-    border: 1px solid #dadfe9;
-}
-.featured-cars-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 30px;
-    height: 220px;
-    border-bottom: 1px solid #dadfe9;
-}
-.featured-model-info{padding:12px 7px;}
-.featured-model-info p {
-    font-size: 12px;
-    color: #8c92a0;
-    text-transform: capitalize;
-}
-.featured-mi-span{display: inline-block;margin:0 10px;}
-.featured-hp-span{display: inline-block;margin-right: 10px;}
-.featured-cars-txt{margin:21px 0 47px;}
-.featured-cars-txt h2 a{font-size: 16px;margin-bottom: 15px;}
-.featured-cars-txt h2 a span{text-transform: uppercase;}
-.featured-cars-txt h3{margin-bottom: 10px;}
-.featured-cars-txt h3,.featured-cars-txt p{font-size: 13px;}
-/*.single-featured-cars*/
+            <div class="item">
+              <a href="#">
+                <img src="assets/images/brand/br5.png" alt="brand-image" />
+              </a>
+            </div>
+            <!--/.item-->
 
-/*-------------------------------------       
-        8. Clients-say 
---------------------------------------*/
-.clients-say{padding:115px 0 80px;background: #f8f9fb;}
+            <div class="item">
+              <a href="#">
+                <img src="assets/images/brand/br6.png" alt="brand-image" />
+              </a>
+            </div>
+            <!--/.item-->
+          </div>
+          <!--/.owl-carousel-->
+        </div>
+        <!--/.clients-area-->
+      </div>
+      <!--/.container-->
+    </section>
+    <!--/brand-->
+    <!--brand end -->
 
-/*single-testimonial-box */
-.single-testimonial-box  {
-    padding: 50px 30px 57px;
-    text-align: center;
-    border: 1px solid #dadfe9;
-    overflow-x: hidden;
-    -webkit-transition: .3s; 
-    -moz-transition:.3s; 
-    -ms-transition:.3s; 
-    -o-transition:.3s;
-    transition: .3s;
-}
+    <!--blog start -->
+    <section id="blog" class="blog"></section>
+    <!--/.blog-->
+    <!--blog end -->
 
-/*testimonial-description*/
-.clients-say .testimonial-carousel .col-sm-3,
-.clients-say .testimonial-carousel .col-xs-12{
-    width:100%;
-    height:auto;
-}
-/* testimonial-info */
-.testimonial-img {
-    margin-right: 5px;
-    border-radius:50%;
-    -webkit-transition: .3s; 
-    -moz-transition:.3s; 
-    -ms-transition:.3s; 
-    -o-transition:.3s;
-    transition: .3s;
-}
-.testimonial-person h2 a,.testimonial-person h4 {
-    font-size: 16px;
-    color: #5e6778;
-    font-weight: 600;
-}
-.testimonial-person h4{
-    margin-top: 10px;
-}/* testimonial-info */
+    <!--contact start-->
+    <footer id="contact" class="contact">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="single-footer-widget">
+                <div class="footer-logo">
+                  <a href="index.html">T-SHIRT HUB</a>
+                </div>
+                <!-- <p>
+                  Ased do eiusm tempor incidi ut labore et dolore magnaian
+                  aliqua. Ut enim ad minim veniam.
+                </p> -->
+                <div class="footer-contact">
+                  <!-- <p>smilomziyako779@gmail.com</p>
+                  <p>0607387705</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+              <div class="single-footer-widget">
+                <!-- <h2>about devloon</h2>
+                <ul>
+                  <li><a href="#">about us</a></li>
+                  <li><a href="#">career</a></li>
+                  <li>
+                    <a href="#">terms <span> of service</span></a>
+                  </li>
+                  <li><a href="#">privacy policy</a></li>
+                </ul> -->
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-12">
+              <div class="single-footer-widget">
+                <!-- <h2>top brands</h2> -->
+                <div class="row">
+                  <div class="col-md-7 col-xs-6">
+                    <ul>
+                      <!--  <li><a href="#">BMW</a></li>
+                      <li><a href="#">lamborghini</a></li>
+                      <li><a href="#">camaro</a></li>
+                      <li><a href="#">audi</a></li>
+                      <li><a href="#">infiniti</a></li>
+                      <li><a href="#">nissan</a></li>
+                      <li><a href="@T-shirt_Hub">Instagram</a></li>
+                      <li><a href="@Tshirt_ Hub">TikTok</a></li>-->
+                    </ul>
+                  </div>
+                  <div class="col-md-5 col-xs-6">
+                    <!-- <ul>
+                      <li><a href="#">ferrari</a></li>
+                      <li><a href="#">porsche</a></li>
+                      <li><a href="#">land rover</a></li>
+                      <li><a href="#">aston martin</a></li>
+                      <li><a href="#">mersedes</a></li>
+                      <li><a href="#">opel</a></li>
+                    </ul> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-offset-1 col-md-3 col-sm-6">
+              <div class="single-footer-widget">
+                <h2>news letter</h2>
+                <div class="footer-newsletter">
+                  <p>Subscribe to get latest news update and informations</p>
+                </div>
+                <div class="hm-foot-email">
+                  <div class="foot-email-box">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Add Email"
+                    />
+                  </div>
+                  <!--/.foot-email-box-->
+                  <div class="foot-email-subscribe">
+                    <span><i class="fa fa-arrow-right"></i></span>
+                  </div>
+                  <!--/.foot-email-icon-->
+                </div>
+                <!--/.hm-foot-email-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>
+                &copy; copyright T-SHIRT HUB
+                <!-- <a href="https://www.themesine.com/">themesine</a>. -->
+              </p>
+              <!--/p-->
+            </div>
+            <div class="col-sm-6">
+              <div class="footer-social">
+                <!-- <a href="@Tshirt_ Hub"><i class="fa-brands fa-tiktok"></i></a> -->
+                <a
+                  href="https://www.instagram.com/tshirthub.co?igsh=MTBqZTB6MWY5YnhmeA%3D%3D&utm_source=qr"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+                <!-- <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                <a href="#"><i class="fa fa-behance"></i></a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/.footer-copyright-->
+      </div>
+      <!--/.container-->
 
+      <div id="scroll-Top">
+        <div class="return-to-top">
+          <i
+            class="fa fa-angle-up"
+            id="scroll-top"
+            data-toggle="tooltip"
+            data-placement="top"
+            title=""
+            data-original-title="Back to Top"
+            aria-hidden="true"
+          ></i>
+        </div>
+      </div>
+      <!--/.scroll-Top-->
+    </footer>
+    <!--/.contact-->
+    <!--contact end-->
 
-/* testimonial-comment */
-.testimonial-comment p {
-    font-size: 16px;
-    color: #5e6778;
-    margin-top: 30px;
-    margin-bottom: 25px;
-}/* testimonial-comment */
+    <!-- Include all js compiled plugins (below), or include individual files as needed -->
 
+    <script src="assets/js/jquery.js"></script>
 
-/*testimonial-description*/
-.single-testimonial-box:hover h2 a,.single-testimonial-box:hover h4, .single-testimonial-box:hover p{color: #fff;}
-.single-testimonial-box:hover{
-    background: #4e4ffa;
-    border: 1px solid #4e4ffa;
-    box-shadow: 0 12px 30px 0px rgba(0,1,193,.2);
-}
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
-/*owl carousel*/
-.clients-say .owl-carousel .owl-stage {
-    position: relative;
-    padding: 100px 0 40px;
-}
-.clients-say .owl-carousel .owl-item img {
-    display: block;
-    width: 70px;
-    height: 70px;
-    border-radius:50%;
-    margin:0 auto;
-}
-/*owl carousel*/
+    <!--bootstrap.min.js-->
+    <script src="assets/js/bootstrap.min.js"></script>
 
-/*-------------------------------------
-        9. Brand
---------------------------------------*/
-.brand{
-    padding: 120px 0;
-}
-.brand-area {
-    position:relative;
-}
-.brand-area .item {
-    padding: 0 40px 0;
-}
+    <!-- bootsnav js -->
+    <script src="assets/js/bootsnav.js"></script>
 
-.brand .brand-area .owl-carousel .owl-item img {
-    display: block;
-    width: 100%;
-    height:72px;
-    border-radius:0;
-}
-/*-------------------------------------
-        10. Blog
---------------------------------------*/
+    <!--owl.carousel.js-->
+    <script src="assets/js/owl.carousel.min.js"></script>
 
-/*-------------------------------------
-        12. Contact
---------------------------------------*/
-.contact {
-    background: #2a2d54;
-}
-.footer-top {padding: 112px 0 72px;}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-/*.footer-logo*/
-.footer-logo a,.footer-logo a:hover,.footer-logo a:focus{
-    display: inline-block;
-    color: #fff;
-    font-size: 24px;
-    letter-spacing: 3px;
-    font-family: 'Rufina', serif;
-    font-weight: 700;
-    text-transform:uppercase;
-}
-.single-footer-widget p {
-    font-size: 14px;
-    color: #eeeff6;
-    max-width: 300px;
-    margin:40px 0 20px;
-}
-.footer-contact p {
-    margin: 0;
-    color: #d1d7e9;
-}
-/*.footer-logo*/
-
-.single-footer-widget {margin-bottom: 40px;}
-.single-footer-widget h2 {
-    font-size: 14px;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 43px;
-}
-.single-footer-widget ul li {
-    display:  inherit;
-    -webkit-transition: .5s; 
-    -moz-transition:.5s; 
-    -ms-transition:.5s; 
-    -o-transition:.5s;
-    transition: .5s;
-}
-.single-footer-widget ul li:hover{
-    -webkit-transform:translateX(10px);
-    -moz-transform:translateX(10px);
-    -ms-transform:translateX(10px);
-    -o-transform:translateX(10px);
-    transform:translateX(10px);
-}
-.single-footer-widget ul li a {
-    font-size:  14px;
-    color:  #cfd0e3;
-    font-weight:  300;
-    padding-bottom: 13px;
-}
-.single-footer-widget ul li a span {text-transform: lowercase;}
-.footer-newsletter p{
-    color: #aeafc2;
-    font-size: 14px;
-    font-weight: 300;
-    margin: 0 0 15px;
-}
-/*hm-foot-email*/
-.hm-foot-email{position: relative;}
-.foot-email-box .form-control {
-    background:#26294d;
-    display: block;
-    padding: 15px 20px;
-    outline:0!important;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-    border:0;
-}
-.foot-email-box input[type="text"]{
-    font-size: 12px;
-    color: #666c81;
-    font-weight: 300;
-}
-.foot-email-subscribe {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 100%;
-    background: transparent;
-    color: #666c81;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.foot-email-box .form-control:hover{
-    box-shadow:0 5px 15px rgba(0,0,0,.4);
-}
-/*hm-foot-email*/
-/*.footer-copyright */
-.footer-copyright {
-    padding: 20px 0 17px;
-    border-top: 1px solid #434859;
-}
-.footer-copyright p,.footer-copyright p a {
-    color: #a8a9bf;
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: capitalize;
-}
-.footer-social{text-align: right;}
-.footer-social a i {
-    color: #fff;
-    opacity: .40;
-    font-size: 14px;
-    margin-left: 16px;
-    -webkit-transition: .3s; 
-    -moz-transition:.3s; 
-    -ms-transition:.3s; 
-    -o-transition:.3s;
-    transition: .3s;
-}
-.footer-social i:hover{opacity: .70;}
-/*.footer-copyright */
-
-/*===============================
-    Scroll Top
-===============================*/
-#scroll-Top  .return-to-top {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    display: none;
-    width: 40px;
-    line-height: 40px;
-    height: 40px;
-    text-align: center;
-    font-size: 20px;
-    cursor: pointer;
-    color: #fff;
-    background:#4e4ffa;
-	border:1px solid #4e4ffa;
-	border-radius:50%;
-	-webkit-transition: .5s; 
-	-moz-transition:.5s; 
-	-ms-transition:.5s; 
-	-o-transition:.5s;
-    transition: .5s;
-	z-index: 2;
-}
-#scroll-Top  .return-to-top:hover {
-    background:#fff;
-    color: #4e4ffa;
-	border:1px solid #4e4ffa;
-}
-
-#scroll-Top  .return-to-top i{
-    position:relative;
-    bottom:0;
-
-}
-
-#scroll-Top  .return-to-top i{
-    position: relative;
-    animation-name: example;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-duration:1s;
-}
-@keyframes example {
-    0%   {bottom:0px;}
-    100%  {bottom:7px;}
-}
-
-.hideDivs{
-    display: none;
-}
-/*========================Thank you=================
+    <!--Custom JS-->
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
