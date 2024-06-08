@@ -56,6 +56,18 @@
     <!--responsive.css-->
     <link rel="stylesheet" href="assets/css/responsive.css" />
 
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "lcPDnXsQrSNspCH2s",
+        });
+      })();
+    </script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 
@@ -77,7 +89,7 @@
     <!--welcome-hero start -->
     <section id="home" class="welcome-hero">
       <!-- top-area Start -->
-      <img id="img" src="/assets/images/welcome-hero/milo.jpg" />
+      <img id="img" src="milo.jpg" />
       <div class="top-area">
         <div class="header-area">
           <!-- Start Navigation -->
@@ -141,13 +153,11 @@
 
       <div class="container">
         <div class="welcome-hero-txt">
-          <h2>COMING SOON!</h2>
-          <p>
-            T-Shirt Hub is happy to announce a new drop coming soon. Our new
-            collection T-shirts, hoodies and various designs to chose from.
-          </p>
-          <button class="welcome-btn" onclick="window.location.href='#'">
-            COMING SOON
+          <h2>T-Shirt Hub is COMING SOON!</h2>
+          <p>Our first ever collection will be launching 30th June 2024.</p>
+
+          <button class="welcome-btn" onclick="window.location.href='#email'">
+            Subscribe for Updates
           </button>
         </div>
       </div>
@@ -902,6 +912,7 @@
               <div class="single-footer-widget">
                 <div class="footer-logo">
                   <a href="index.html">T-SHIRT HUB</a>
+                  <img src="TS.jpg" alt="" id="logo" />
                 </div>
                 <!-- <p>
                   Ased do eiusm tempor incidi ut labore et dolore magnaian
@@ -964,13 +975,14 @@
                 <div class="hm-foot-email">
                   <div class="foot-email-box">
                     <input
+                      id="email"
                       type="text"
                       class="form-control"
                       placeholder="Add Email"
                     />
                   </div>
                   <!--/.foot-email-box-->
-                  <div class="foot-email-subscribe">
+                  <div class="foot-email-subscribe" id="submit">
                     <span><i class="fa fa-arrow-right"></i></span>
                   </div>
                   <!--/.foot-email-icon-->
@@ -1045,5 +1057,7 @@
 
     <!--Custom JS-->
     <script src="assets/js/custom.js"></script>
+
+    <script src="assets/js/sendEmail.js"></script>
   </body>
 </html>
