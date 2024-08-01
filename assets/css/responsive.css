@@ -26,6 +26,7 @@
 
 	.featured-cars-img {
 		padding: 0 10px;
+		height: auto;
 	}
 
 	.row {
