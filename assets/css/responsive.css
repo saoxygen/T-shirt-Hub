@@ -26,6 +26,7 @@
 
 	.featured-cars-img {
 		padding: 0 10px;
+		height: auto;
 	}
 
 	.row {
@@ -49,7 +50,7 @@
 	}
 
 	nav.navbar.bootsnav {
-		background-color: #000;
+		background-color: #fff;
 	}
 
 	.wrap-sticky nav.navbar.bootsnav.sticked ul.nav>li>a {
@@ -63,6 +64,22 @@
 	nav.navbar.bootsnav ul.nav>li>a {
 		padding: 15px 0px;
 		border: transparent;
+	}
+
+	#img {
+		/* z-index: -1; */
+		position: relative;
+		width: 100%;
+		object-fit: contain;
+		transform: translateY(50px);
+	}
+
+	#home {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-end;
+		height: 100%;
+		overflow: visible;
 	}
 }
 
@@ -163,11 +180,10 @@
 
 @media screen and (max-width: 440px) {
 
-	.welcome-hero-txt h2
-	{
-	font-size: 24px;
-	line-height: 1.5;
-}
+	.welcome-hero-txt h2 {
+		font-size: 24px;
+		line-height: 1.5;
+	}
 
 }
 
