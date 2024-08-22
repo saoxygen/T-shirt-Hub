@@ -218,7 +218,7 @@ nav.navbar.bootsnav {
 .navbar-header a.navbar-brand:hover,
 .navbar-header a.navbar-brand:focus {
     display: inline-block;
-    color: #000;
+    color: #fff;
     font-size: 24px;
     letter-spacing: 3px;
     /* font-family: 'Rufina', serif; */
@@ -243,7 +243,7 @@ nav.navbar.bootsnav {
 
 /*.nav li*/
 nav.navbar.bootsnav ul.nav>li>a {
-    color: #000;
+    color: #fff;
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
@@ -1038,10 +1038,6 @@ nav.navbar.bootsnav .navbar-toggle i {
     }
 }
 
-.hideDivs {
-    display: none;
-}
-
 .shop {
     background-color: #000;
     padding: 10px 20px;
@@ -1160,9 +1156,37 @@ nav.navbar.bootsnav .navbar-toggle i {
     color: #707070;
 }
 
-label {
+.form-container2 .field-container:first-of-type {
+    grid-area: t;
+}
+
+.form-container2 .field-container:nth-of-type(2) {
+    grid-area: size;
+}
+
+.form-container2 .field-container:nth-of-type(3) {
+    grid-area: colour;
+}
+
+.form-container2 .field-container:nth-of-type(4) {
+    grid-area: cart;
+}
+
+.form-container2 {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 90px 90px 90px 90px;
+    grid-template-areas: "t t" "size size" "colour colour" "cart cart";
+    max-width: 400px;
+    padding: 20px;
+    color: #707070;
+}
+
+label { 
     padding-bottom: 5px;
     font-size: 13px;
+    text-align: center;
 }
 
 input {
@@ -1467,15 +1491,18 @@ form,
     flex-direction: column;
 }
 
-#back {
+#back,
+#back2,
+#back3,
+#back4 {
     position: absolute;
     left: 20px;
 }
 
 .main_label_div {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
@@ -1489,9 +1516,112 @@ form,
 
 .main_label_div .label_div label {
     color: #818998;
-    margin: 0px;
-    padding: 0px;
     width: 15px;
 }
 
-/*========================Thank you=================
+.blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#blog label {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+#blog select {
+    margin-left: 20px;
+
+}
+
+.payment_div {
+    padding-bottom: 20px;
+}
+
+.form-container2 button {}
+
+.featured-cars-txt .extra_text {
+    min-height: 100px;
+}
+
+#purchase_img,
+#ts .card {
+    width: 30%;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 30% 30% 30% 30%;
+    width: 100%;
+}
+
+.cart-item .col-lg-3 {
+    width: 80%;
+}
+
+.cart-item .featured-img-box {
+    width: 80%;
+}
+
+.cart-item .featured-cars-txt {
+    margin: 0px;
+}
+
+.cart-item .card {
+    display: flex;
+}
+
+.cart-item .card .single-featured-cars {
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto;
+}
+
+#navbar-menu i {
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+}
+
+.notification {
+    background-color: #fff;
+    height: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: inset -2px -2px 2px #00000049, inset 2px 2px 1px #00000049;
+    position: fixed;
+    z-index: 1;
+    top: calc(50vh - 100px);
+    left: calc(50vw - 150px);
+    transition: 0.2s;
+}
+
+.notification div {
+    padding: 0px 20px;
+}
+
+#notification_symbol i {
+    font-size: 30px;
+    color: #00000049;
+}
+
+#payment_cart a {
+    font-size: 15px;
+}
+
+#cart_items i {
+    font-size: 16px;
+}
+
+/*========================Thank you=================*/
+
+.hideDivs {
+    display: none;
+}

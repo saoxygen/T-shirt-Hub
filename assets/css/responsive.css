@@ -78,8 +78,29 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-end;
-		height: 100%;
-		overflow: visible;
+		height: max-content;
+		/* overflow: visible; */
+	}
+
+	nav.navbar.bootsnav ul.nav>li>a {
+		color: #000;
+	}
+
+	.navbar-header a.navbar-brand {
+		color: #000;
+	}
+
+	.footer-top {}
+
+	#purchase_img,
+	#ts .card {
+		width: 100%;
+	}
+
+	.cart-item {
+		display: grid;
+		grid-template-columns: 100%;
+		width: 100%;
 	}
 }
 

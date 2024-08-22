@@ -23,7 +23,7 @@
 
   <!--font-awesome.min.css-->
   <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!--linear icon css-->
   <link rel="stylesheet" href="assets/css/linearicons.css" />
 
@@ -84,7 +84,7 @@
   <!--welcome-hero start -->
   <section id="home" class="welcome-hero">
     <!-- top-area Start -->
-    <img id="img" src="/assets/images/jhb_group_model2.jpg" />
+    <img id="img" src="assets/images/jhb_group_model2.jpg" />
     <div class="top-area">
       <div class="header-area">
         <!-- Start Navigation -->
@@ -105,9 +105,12 @@
             <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
               <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
                 <li class="scroll active"><a href="#clients-say">Gallery</a></li>
-                <li class="scroll"><a href="#featured-cars">Shop</a></li>
-                <li class="scroll">
+                <li class="scroll"><a href="#featured-cars" id="shop_nav_btn">Shop</a></li>
+                <li class="scroll" onclick="openAbout()">
                   <a href="#about">About</a>
+                </li>
+                <li class="scroll" onclick="openCart()">
+                  <a href="#cart">View Cart <i class="fa-solid fa-cart-shopping"></i></a>
                 </li>
                 <!--<li class="scroll"><a href="#new-cars">new cars</a></li>
                   <li class="scroll"><a href="#brand">brands</a></li> 
@@ -274,6 +277,222 @@
   </section>
   <!--/.welcome-hero-->
   <!--welcome-hero end -->
+
+  <!--featured-cars start -->
+  <section id="featured-cars" class="featured-cars ">
+    <div class="container">
+      <div class="section-header">
+        <p>T-shirt Hub</p>
+        <h2>Graphic Tees</h2>
+      </div>
+      <!--/.section-header-->
+      <div class="featured-cars-content">
+        <div class="row" id="ts">
+          <a href="img.html#jhb_t">
+            <div class="col-lg-3 col-md-4 col-sm-6 card">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img id="origin_img" src="assets/images/jhb_t.JPEG" alt="cars" />
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2><a href="#" id="origin_name">THE ORIGIN TEE</a></h2>
+                  <p class="extra_text">Request your city on our Instagram DMs <a
+                      href="https://www.instagram.com/tshirthub.co?igsh=eTV4ejNjM2NreXpm">@tshirthub.co</a></p>
+                  <h3 id="origin_price">R370.00</h3>
+                  <button id="origin" class="shop">ADD TO CART</button>
+
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="img.html#mum_t">
+            <div class="col-lg-3 col-md-4 col-sm-6 card">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img id="somebody_img" src="assets/images/life_t.JPEG" alt="cars" />
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2>
+                    <a href="#" id="somebody_name">STYLISH SOMEBODY TEE</a>
+                  </h2>
+                  <p class="extra_text"></p>
+                  <h3 id="somebody_price">R370.00</h3>
+                  <button id="somebody" class="shop">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="img.html#mum_t">
+            <div class="col-lg-3 col-md-4 col-sm-6 card">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img id="special_img" src="assets/images/mum_t.JPEG" alt="cars" />
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2>
+                    <a href="#" id="special_name">THE SPECIAL KID TEE</a>
+                  </h2>
+                  <p class="extra_text"></p>
+                  <h3 id="special_price">R400.00</h3>
+                  <button id="special" class="shop">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="img.html#dressing">
+            <div class="col-lg-3 col-md-4 col-sm-6 card">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img id="fame_img" src="assets/images/dressing.JPEG" alt="cars" />
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2>
+                    <a href="#" id="fame_name">THE FAME TSHIRT</a>
+                  </h2>
+                  <p class="extra_text"></p>
+                  <h3 id="fame_price">R350.00</h3>
+                  <button id="fame" class="shop">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="img.html#WELLNESS">
+            <div class="col-lg-3 col-md-4 col-sm-6 card">
+              <div class="single-featured-cars">
+                <div class="featured-img-box">
+                  <div class="featured-cars-img">
+                    <img id="wellness_img" src="assets/images/THE WELLNESS TEE.JPEG" alt="cars" />
+                  </div>
+                </div>
+                <div class="featured-cars-txt">
+                  <h2>
+                    <a href="#" id="wellness_name">THE WELLNESS TEE</a>
+                  </h2>
+                  <p class="extra_text"></p>
+                  <h3 id="wellness_price">R350.00</h3>
+                  <button id="wellness" class="shop">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div></div>
+          </a>
+        </div>
+        <div class="row hideDivs">
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="single-featured-cars">
+              <div class="featured-img-box">
+                <div class="featured-cars-img">
+                  <img src="assets/images/featured-cars/fc4.png" alt="cars" />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">infiniti <span>z5</span></a>
+                </h2>
+                <h3>$36,850</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="single-featured-cars">
+              <div class="featured-img-box">
+                <div class="featured-cars-img">
+                  <img src="assets/images/featured-cars/fc5.png" alt="cars" />
+                </div>
+                <div class="featured-model-info">
+                  <p>
+                    model: 2017
+                    <span class="featured-mi-span"> 3100 mi</span>
+                    <span class="featured-hp-span"> 240HP</span>
+                    automatic
+                  </p>
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">porsche <span>718</span> cayman</a>
+                </h2>
+                <h3>$48,500</h3>
+                <p>
+                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                  amet, consectetur, adipisci velit, sed quia non.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="single-featured-cars">
+              <div class="featured-img-box">
+                <div class="featured-cars-img">
+                  <img src="assets/images/featured-cars/fc7.png" alt="cars" />
+                </div>
+                <div class="featured-model-info">
+                  <p>
+                    model: 2017
+                    <span class="featured-mi-span"> 3100 mi</span>
+                    <span class="featured-hp-span"> 240HP</span>
+                    automatic
+                  </p>
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#"><span>bmw 8-</span>series coupe</a>
+                </h2>
+                <h3>$56,000</h3>
+                <p>
+                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                  amet, consectetur, adipisci velit, sed quia non.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="single-featured-cars">
+              <div class="featured-img-box">
+                <div class="featured-cars-img">
+                  <img src="assets/images/featured-cars/fc8.png" alt="cars" />
+                </div>
+                <div class="featured-model-info">
+                  <p>
+                    model: 2017
+                    <span class="featured-mi-span"> 3100 mi</span>
+                    <span class="featured-hp-span"> 240HP</span>
+                    automatic
+                  </p>
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">BMW <span> x</span>series-6</a>
+                </h2>
+                <h3>$75,800</h3>
+                <p>
+                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                  amet, consectetur, adipisci velit, sed quia non.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/.container-->
+  </section>
+  <!--/.featured-cars-->
+  <!--featured-cars end -->
 
   <!--service start -->
   <section id="service" class="service hideDivs">
@@ -453,7 +672,10 @@
   <!--/.new-cars-->
   <!--new-cars end -->
 
-  <section id="about" class="featured-cars ">
+  <section id="about" class="featured-cars hideDivs">
+    <span id="back3" class="material-symbols-outlined">
+      arrow_back
+    </span>
     <div class="container">
       <div class="section-header">
         <p>T-shirt Hub</p>
@@ -585,202 +807,6 @@
   <!--/.clients-say-->
   <!-- clients-say end -->
 
-  <!--featured-cars start -->
-  <section id="featured-cars" class="featured-cars ">
-    <div class="container">
-      <div class="section-header">
-        <p>T-shirt Hub</p>
-        <h2>Graphic Tees</h2>
-      </div>
-      <!--/.section-header-->
-      <div class="featured-cars-content">
-        <div class="row" id="ts">
-          <a href="/img.html#jhb_t">
-            <div class="col-lg-3 col-md-4 col-sm-6 card">
-              <div class="single-featured-cars">
-                <div class="featured-img-box">
-                  <div class="featured-cars-img">
-                    <img src="/assets/images/jhb_t.JPEG" alt="cars" />
-                  </div>
-                </div>
-                <div class="featured-cars-txt">
-                  <h2><a href="#" id="origin_name">THE ORIGIN TEE</a></h2>
-                  <p class="extra_text">Request your city on our Instagram DMs <a
-                      href="https://www.instagram.com/tshirthub.co?igsh=eTV4ejNjM2NreXpm">@tshirthub.co</a></p>
-                  <h3 id="origin_price">R370.00</h3>
-                  <button id="origin" class="shop">Shop Now</button>
-
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="/img.html#mum_t">
-            <div class="col-lg-3 col-md-4 col-sm-6 card">
-              <div class="single-featured-cars">
-                <div class="featured-img-box">
-                  <div class="featured-cars-img">
-                    <img src="assets/images/life_t.JPEG" alt="cars" />
-                  </div>
-                </div>
-                <div class="featured-cars-txt">
-                  <h2>
-                    <a href="#" id="somebody_name">STYLISH SOMEBODY TEE</a>
-                  </h2>
-                  <p></p>
-                  <h3 id="somebody_price">R370.00</h3>
-                  <button id="somebody" class="shop">Shop Now</button>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="/img.html#mum_t">
-            <div class="col-lg-3 col-md-4 col-sm-6 card">
-              <div class="single-featured-cars">
-                <div class="featured-img-box">
-                  <div class="featured-cars-img">
-                    <img src="assets/images/mum_t.JPEG" alt="cars" />
-                  </div>
-                </div>
-                <div class="featured-cars-txt">
-                  <h2>
-                    <a href="#" id="special_name">THE SPECIAL KID TEE</a>
-                  </h2>
-                  <p></p>
-                  <h3 id="special_price">R400.00</h3>
-                  <button id="special" class="shop">Shop Now</button>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="/img.html#dressing">
-            <div class="col-lg-3 col-md-4 col-sm-6 card">
-              <div class="single-featured-cars">
-                <div class="featured-img-box">
-                  <div class="featured-cars-img">
-                    <img src="assets/images/dressing.JPEG" alt="cars" />
-                  </div>
-                </div>
-                <div class="featured-cars-txt">
-                  <h2>
-                    <a href="#" id="fame_name">THE FAME TSHIRT</a>
-                  </h2>
-                  <p></p>
-                  <h3 id="fame_price">R350.00</h3>
-                  <button id="fame" class="shop">Shop Now</button>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a href="">
-            <div></div>
-          </a>
-        </div>
-        <div class="row hideDivs">
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="single-featured-cars">
-              <div class="featured-img-box">
-                <div class="featured-cars-img">
-                  <img src="assets/images/featured-cars/fc4.png" alt="cars" />
-                </div>
-              </div>
-              <div class="featured-cars-txt">
-                <h2>
-                  <a href="#">infiniti <span>z5</span></a>
-                </h2>
-                <h3>$36,850</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="single-featured-cars">
-              <div class="featured-img-box">
-                <div class="featured-cars-img">
-                  <img src="assets/images/featured-cars/fc5.png" alt="cars" />
-                </div>
-                <div class="featured-model-info">
-                  <p>
-                    model: 2017
-                    <span class="featured-mi-span"> 3100 mi</span>
-                    <span class="featured-hp-span"> 240HP</span>
-                    automatic
-                  </p>
-                </div>
-              </div>
-              <div class="featured-cars-txt">
-                <h2>
-                  <a href="#">porsche <span>718</span> cayman</a>
-                </h2>
-                <h3>$48,500</h3>
-                <p>
-                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                  amet, consectetur, adipisci velit, sed quia non.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="single-featured-cars">
-              <div class="featured-img-box">
-                <div class="featured-cars-img">
-                  <img src="assets/images/featured-cars/fc7.png" alt="cars" />
-                </div>
-                <div class="featured-model-info">
-                  <p>
-                    model: 2017
-                    <span class="featured-mi-span"> 3100 mi</span>
-                    <span class="featured-hp-span"> 240HP</span>
-                    automatic
-                  </p>
-                </div>
-              </div>
-              <div class="featured-cars-txt">
-                <h2>
-                  <a href="#"><span>bmw 8-</span>series coupe</a>
-                </h2>
-                <h3>$56,000</h3>
-                <p>
-                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                  amet, consectetur, adipisci velit, sed quia non.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="single-featured-cars">
-              <div class="featured-img-box">
-                <div class="featured-cars-img">
-                  <img src="assets/images/featured-cars/fc8.png" alt="cars" />
-                </div>
-                <div class="featured-model-info">
-                  <p>
-                    model: 2017
-                    <span class="featured-mi-span"> 3100 mi</span>
-                    <span class="featured-hp-span"> 240HP</span>
-                    automatic
-                  </p>
-                </div>
-              </div>
-              <div class="featured-cars-txt">
-                <h2>
-                  <a href="#">BMW <span> x</span>series-6</a>
-                </h2>
-                <h3>$75,800</h3>
-                <p>
-                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                  amet, consectetur, adipisci velit, sed quia non.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--/.container-->
-  </section>
-  <!--/.featured-cars-->
-  <!--featured-cars end -->
-
   <!--brand strat -->
   <section id="brand" class="brand hideDivs">
     <div class="container">
@@ -835,19 +861,124 @@
   <!--brand end -->
 
   <!--blog start -->
-  <section id="blog" class="blog"></section>
+  <section id="blog" class="blog hideDivs">
+        <span id="back4" class="material-symbols-outlined">
+          arrow_back
+        </span>
+    <div class="featured-img-box">
+      <div class="featured-cars-img">
+        <img id="purchase_img" src="" alt="T-shirt being purchased" />
+      </div>
+    </div>
+    <div class="form-container2">
+      <div class="field-container">
+        <div class="main_label_div">
+          <label for="tshirt size">T-Shirt Size:</label>
+          <select name="T-Shirt Size" id="T-Shirt-Size">
+            <option value=""></option>
+            <option value="Extra Small">XS</option>
+            <option value="Small">S</option>
+            <option value="Medium">M</option>
+            <option value="Large">L</option>
+            <option value="Extra Large">XL</option>
+            <option value="Double Extra Large">XXL</option>
+          </select>
+          <!-- <div class="label_div">
+            <label for="">XS</label>
+            <input type="radio" name="size" value="Extra Small" id="XS">
+          </div>
+          <div class="label_div">
+            <label for="">S</label>
+            <input type="radio" name="size" value="Small" id="S">
+          </div>
+          <div class="label_div">
+            <label for="">M</label>
+            <input type="radio" name="size" value="Medium" id="M">
+          </div>
+          <div class="label_div">
+            <label for="">L</label>
+            <input type="radio" name="size" value="Large" id="L">
+          </div>
+          <div class="label_div">
+            <label for="">XL</label>
+            <input type="radio" name="size" value="Extra Large" id="XL">
+          </div>
+          <div class="label_div">
+            <label for="">XXL</label>
+            <input type="radio" name="size" value="Double Extra Large" id="L">
+          </div> -->
+        </div>
+
+      </div>
+      <div class="field-container hideDivs" id="colour_t">
+        <div class="main_label_div">
+          <label for="mail">T-Shirt Colour:</label>
+          <select name="T-Shirt Colour" id="T-Shirt-Colour">
+            <option value=""></option>
+            <option value="White">White</option>
+            <option value="Black">Black</option>
+          </select>
+          <!-- <div class="label_div">
+            <label for="">White</label>
+            <input type="radio" name="colour" value="White" id="W">
+          </div>
+          <div class="label_div">
+            <label for="">Black</label>
+            <input type="radio" name="colour" value="Black" id="B">
+          </div> -->
+        </div>
+      </div>
+      <div class="field-container" id="add_to_cart_div">
+        <button id="add_to_cart" class="shop">ADD TO CART</button>
+        <button onclick="openCart()" class="shop">VIEW CART</button>
+      </div>
+    </div>
+  </section>
+  <section class="payment_cart hideDivs" id="payment_cart">
+    <div class="payment-title">
+      <span id="back2" class="material-symbols-outlined">
+        arrow_back
+      </span>
+      <h1>Cart</h1>
+    </div>
+    <div class="cart-item" id="cart_items">
+
+    </div>
+    <div class="field-container continue_btn">
+      <div class="main_label_div">
+        <label for="mail">Total Amout to be Paid: R</label>
+        <label for="" id="total_price_to_pay">0</label>
+      </div>
+      <div class="main_label_div">
+        <label for="mail">Please note an additional R130 will be added as a delivery free, <a href="shipping.html">read
+            more</a> on the delivery process</label>
+      </div>
+      <button id="checkout" class="shop">CHECKOUT</button>
+    </div>
+  </section>
+
+  <section class="notification hideDivs" id="notification">
+    <div id="notification_message">
+    </div>
+    <div id="notification_symbol">
+    </div>
+  </section>
   <!--/.blog-->
-  <!--blog end 24902288 wewtirdkzmxsh-->
+  <!--blog end 24902288 wewtirdkzmxsh tshirt hub-->
+  <!--blog end 10034663 3wr9fxh49jxhz-->
+  <!--blog end 24896502 dvirusrtphj9s Kopano-->
+  <!--blog end 10034779 45yq2d5cye74m Kopano Test-->
   <section class="payment_div hideDivs" id="payment_div">
     <!-- test https://sandbox.payfast.co.za​/eng/process -->
     <!-- live https://www.payfast.co.za/eng/process -->
-    <form action="https://www.payfast.co.za/eng/process" method="post">
-      <input type="hidden" name="merchant_id" value="10000100">
-      <input type="hidden" name="merchant_key" value="46f0cd694581a">
+    <form action="https://sandbox.payfast.co.za​/eng/process" method="post">
+      <input type="hidden" name="merchant_id" value="10034663">
+      <input type="hidden" name="merchant_key" value="3wr9fxh49jxhz">
       <input type="hidden" id="amount" name="amount" value="">
       <input type="hidden" id="item_name" name="item_name" value="">
-      <input type="hidden" id="custom_int1" name="custom_int1" value="2">
+      <input type="hidden" id="custom_int1" name="custom_int1" value="">
       <input type="hidden" id="custom_str1" name="custom_str1" value="">
+      <input type="hidden" id="custom_str2" name="custom_str2" value="">
       <input type="hidden" id="" name="email_confirmation" value="1">
       <input type="hidden" id="confirmation_address" name="confirmation_address" value="">
 
@@ -866,49 +997,6 @@
         <div class="field-container">
           <label for="mail">Email</label>
           <input id="mail" name="email_address" placeholder="Kopano@tshirthub.com" value="">
-        </div>
-        <div class="field-container">
-          <label for="mail">T-Shirt Size</label>
-          <div class="main_label_div">
-            <div class="label_div">
-              <label for="">XS</label>
-              <input type="radio" name="size" value="Small" id="S">
-            </div>
-            <div class="label_div">
-              <label for="">S</label>
-              <input type="radio" name="size" value="Small" id="S">
-            </div>
-            <div class="label_div">
-              <label for="">M</label>
-              <input type="radio" name="size" value="Medium" id="M">
-            </div>
-            <div class="label_div">
-              <label for="">L</label>
-              <input type="radio" name="size" value="Large" id="L">
-            </div>
-            <div class="label_div">
-              <label for="">XL</label>
-              <input type="radio" name="size" value="Large" id="L">
-            </div>
-            <div class="label_div">
-              <label for="">XXL</label>
-              <input type="radio" name="size" value="Large" id="L">
-            </div>
-          </div>
-
-        </div>
-        <div class="field-container hideDivs" id="colour_t">
-          <label for="mail">T-Shirt Colour</label>
-          <div class="main_label_div">
-            <div class="label_div">
-              <label for="">White</label>
-              <input type="radio" name="colour" value="White" id="W">
-            </div>
-            <div class="label_div">
-              <label for="">Black</label>
-              <input type="radio" name="colour" value="Black" id="B">
-            </div>
-          </div>
         </div>
         <div class="field-container">
           <label for="address">Address</label>
@@ -954,7 +1042,7 @@
                 <a href="index.html">T-SHIRT HUB</a>
                 <img src="TS.jpg" alt="" id="logo" />
               </div>
-              <a href="/shipping.html">How does Shipping work?</a>
+              <a href="shipping.html">How does Shipping work?</a>
               <!-- <p>
                   Ased do eiusm tempor incidi ut labore et dolore magnaian
                   aliqua. Ut enim ad minim veniam.
