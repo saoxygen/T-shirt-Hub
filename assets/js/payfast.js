@@ -372,3 +372,20 @@ function empty(str) {
     return false;
   }
 }
+
+// change image on view port width
+
+function changeImage() {
+  const image = document.getElementById("img");
+  if (window.matchMedia("(max-width: 600px)").matches) {
+    image.src = "assets/images/jhb_group_model.jpg";
+  } else {
+    image.src = "assets/images/jhb_group_model2.jpg";
+  }
+}
+
+// Initial check
+changeImage();
+
+// Listen for viewport changes
+window.addEventListener("resize", changeImage);
