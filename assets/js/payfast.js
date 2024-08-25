@@ -250,6 +250,7 @@ function openCart() {
   nextStep();
   payment_cart.classList.remove("hideDivs");
   document.getElementById("nav_section").classList.add("hideDivs");
+  document.getElementById("home").classList.add("hideDivs");
 }
 
 function openAbout() {
