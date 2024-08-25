@@ -490,14 +490,14 @@
                 
                 // Windown on scroll
                 var getOffset = $(".wrap-sticky").offset().top;
-                $(window).on("scroll", function(){  
-                    var scrollTop = $(window).scrollTop();
-                    if(scrollTop > getOffset){
-                        getNav.addClass("sticked");
-                    }else {
-                        getNav.removeClass("sticked");
-                    }
-                });
+                // $(window).on("scroll", function(){  
+                //     var scrollTop = $(window).scrollTop();
+                //     if(scrollTop > getOffset){
+                //         getNav.addClass("sticked");
+                //     }else {
+                //         getNav.removeClass("sticked");
+                //     }
+                // });
             }   
         },
         

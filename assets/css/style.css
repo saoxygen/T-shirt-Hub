@@ -331,6 +331,7 @@ nav.navbar.bootsnav .navbar-toggle i {
 #home {
     overflow: hidden;
     height: 100vh;
+    transform: translateY(50px);
 }
 
 #tt {
@@ -1183,7 +1184,7 @@ nav.navbar.bootsnav .navbar-toggle i {
     color: #707070;
 }
 
-label { 
+label {
     padding-bottom: 5px;
     font-size: 13px;
     text-align: center;

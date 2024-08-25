@@ -71,7 +71,6 @@
 		position: relative;
 		width: 100%;
 		object-fit: contain;
-		transform: translateY(50px);
 	}
 
 	#home {
@@ -79,6 +78,7 @@
 		justify-content: flex-start;
 		align-items: flex-end;
 		height: max-content;
+		/* transform: translateY(50px); */
 		/* overflow: visible; */
 	}
 

@@ -188,7 +188,8 @@ function pay(name_, mail, address, phone) {
     return;
   }
 
-  document.getElementById("confirmation_address").value = mail;
+  document.getElementById("confirmation_address").value = "tshirthub419@gmail.com";
+  document.getElementById("email_address").value = mail; //customer
   document.getElementById("custom_str1").value = "Address Provided: " + address;
   rest();
   amount.value =
