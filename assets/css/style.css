@@ -1555,7 +1555,7 @@ form,
 
 .cart-item {
     display: grid;
-    grid-template-columns: 30% 30% 30% 30%;
+    grid-template-columns: 30% 30% 30%;
     width: 100%;
 }
 
@@ -1615,6 +1615,11 @@ form,
 
 #payment_cart a {
     font-size: 15px;
+}
+
+#payment_cart {
+    font-size: 15px;
+    padding: 65px 0 80px;
 }
 
 #cart_items i {

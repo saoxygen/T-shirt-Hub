@@ -7,6 +7,9 @@ var amount = document.getElementById("amount");
 var item_name = document.getElementById("item_name");
 var order_info = document.getElementById("custom_str1");
 var custom_str2 = document.getElementById("custom_str2");
+var custom_str3 = document.getElementById("custom_str3");
+var custom_str4 = document.getElementById("custom_str4");
+var custom_str5 = document.getElementById("custom_str5");
 var add_to_cart = document.getElementById("add_to_cart");
 
 var continue_btn = document.getElementById("continue");
@@ -145,7 +148,7 @@ add_to_cart.addEventListener("click", function () {
     document.getElementById("custom_int1").value +=
       " T-Shirt Name: " +
       name_ +
-      " T-shirt Size: " +
+      " T-Shirt Size: " +
       t_size_selectedValue +
       " T-Shirt Colour: " +
       t_colour_Value +
@@ -188,16 +191,34 @@ function pay(name_, mail, address, phone) {
     return;
   }
 
-  document.getElementById("confirmation_address").value = "tshirthub419@gmail.com";
+  document.getElementById("confirmation_address").value =
+    "tshirthub419@gmail.com";
   document.getElementById("email_address").value = mail; //customer
   document.getElementById("custom_str1").value = "Address Provided: " + address;
   rest();
   amount.value =
     parseInt(document.getElementById("total_price_to_pay").innerText) + 0; //130
-  custom_str2.value = document.getElementById("custom_int1").value;
+  // custom_str2.value = document.getElementById("custom_int1").value;
+
+  let str = document.getElementById("custom_int1").value; // max 1020
+  let numSlices = 4;
+  let sliceLength = Math.ceil(str.length / numSlices);
+  let slices = [];
+
+  for (let i = 0; i < numSlices; i++) {
+    let start = i * sliceLength;
+    let end = start + sliceLength;
+    slices.push(str.slice(start, end));
+  }
+
+  custom_str2.value = slices[0];
+  custom_str3.value = slices[1];
+  custom_str4.value = slices[2];
+  custom_str5.value = slices[3];
+
   document.getElementById("custom_int1").value = "";
   const submit = document.getElementById("submit");
-  submit.click();
+  //submit.click();
 }
 
 function nextStep() {
@@ -222,16 +243,19 @@ function rest() {
   document.getElementById("home").classList.remove("hideDivs");
   document.getElementById("contact").classList.remove("hideDivs");
   document.getElementById("blog").classList.add("hideDivs");
+  document.getElementById("nav_section").classList.remove("hideDivs");
 }
 
 function openCart() {
   nextStep();
   payment_cart.classList.remove("hideDivs");
+  document.getElementById("nav_section").classList.add("hideDivs");
 }
 
 function openAbout() {
   nextStep();
   about.classList.remove("hideDivs");
+  document.getElementById("nav_section").classList.add("hideDivs");
 }
 
 function add_item_to_cart(src, price, size, colour, name) {
@@ -251,13 +275,19 @@ function add_item_to_cart(src, price, size, colour, name) {
             </div>
           </div>
           <div class="featured-cars-txt">
-            <h2><a href="#" id="">` +
+            <h2><a href="#" id="` +
+    html_id +
+    `_name">` +
     name +
     `</a></h2>
-            <h3 id="">T-Shirt size:` +
+            <h3 id="` +
+    html_id +
+    `_size">T-shirt size: ` +
     size +
     `</h3>
-            <h3 id="">T-Shirt colour: ` +
+            <h3 id="` +
+    html_id +
+    `_colour">T-Shirt colour: ` +
     colour +
     `</h3>
             <h3 id="` +
@@ -289,6 +319,19 @@ function add_item_to_cart(src, price, size, colour, name) {
 function deleteItem(html_id) {
   const element = document.getElementById(html_id.toString());
   var id_name = html_id + "_price";
+  var tee_name = html_id + "_name";
+  var tee_size = html_id + "_size";
+  var tee_colour = html_id + "_colour";
+
+  var removeText =
+    document.getElementById(tee_name.toString()).innerText +
+    " " +
+    document.getElementById(tee_size.toString()).innerText +
+    " " +
+    document.getElementById(tee_colour.toString()).innerText +
+    " Price: " +
+    document.getElementById(id_name.toString()).innerText.replace("R", "");
+  console.log(" T-Shirt Name: " + removeText);
   const removedItem = document
     .getElementById(id_name.toString())
     .innerText.replace("R", "")
@@ -300,8 +343,10 @@ function deleteItem(html_id) {
     document.getElementById("total_price_to_pay").innerText;
   document.getElementById("total_price_to_pay").innerText =
     parseInt(total_price_to_pay) - parseInt(removedItem);
-
-  console.log(total_price_to_pay + " " + removedItem + " " + id_name);
+  document.getElementById("custom_int1").value = document
+    .getElementById("custom_int1")
+    .value.replace(" T-Shirt Name: " + removeText, "");
+  console.log(document.getElementById("custom_int1").value);
 }
 
 function generateGUID() {
