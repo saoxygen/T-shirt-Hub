@@ -218,7 +218,7 @@ function pay(name_, mail, address, phone) {
 
   document.getElementById("custom_int1").value = "";
   const submit = document.getElementById("submit");
-  //submit.click();
+  submit.click();
 }
 
 function nextStep() {
