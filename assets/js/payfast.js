@@ -36,6 +36,7 @@ origin.addEventListener("click", function () {
   document.getElementById("colour_t").classList.remove("hideDivs");
   amount.value = origin_price.substring(1);
   item_name.value = origin_name;
+
   purchase_img.src = document.getElementById("origin_img").src;
 });
 
@@ -47,6 +48,7 @@ somebody.addEventListener("click", function () {
 
   amount.value = somebody_price.substring(1);
   item_name.value = somebody_name;
+
   purchase_img.src = document.getElementById("somebody_img").src;
 });
 
@@ -58,6 +60,7 @@ special.addEventListener("click", function () {
 
   amount.value = special_price.substring(1);
   item_name.value = special_name;
+
   purchase_img.src = document.getElementById("special_img").src;
 });
 
@@ -70,6 +73,7 @@ fame.addEventListener("click", function () {
 
   amount.value = fame_price.substring(1);
   item_name.value = fame_name;
+
   purchase_img.src = document.getElementById("fame_img").src;
 });
 
@@ -82,6 +86,7 @@ wellness.addEventListener("click", function () {
 
   amount.value = wellness_price.substring(1);
   item_name.value = wellness_name;
+
   purchase_img.src = document.getElementById("wellness_img").src;
 });
 
@@ -130,6 +135,11 @@ add_to_cart.addEventListener("click", function () {
 
   if (!empty(t_size_selectedValue) && !empty(t_colour_Value)) {
     var name_ = item_name.value;
+
+    if (custom_str5.value.indexOf(name_) == -1) {
+      custom_str5.value += " " + name_;
+    }
+
     item_name.value +=
       item_name.value +
       " Colour:  " +
@@ -145,6 +155,7 @@ add_to_cart.addEventListener("click", function () {
       t_colour_Value,
       name_
     );
+
     document.getElementById("custom_int1").value +=
       " T-Shirt Name: " +
       name_ +
@@ -199,6 +210,8 @@ function pay(name_, mail, address, phone) {
   amount.value =
     parseInt(document.getElementById("total_price_to_pay").innerText) + 0; //130
   // custom_str2.value = document.getElementById("custom_int1").value;
+
+  item_name.value = custom_str5.value;
 
   let str = document.getElementById("custom_int1").value; // max 1020
   let numSlices = 4;
@@ -324,6 +337,7 @@ function deleteItem(html_id) {
   var tee_name = html_id + "_name";
   var tee_size = html_id + "_size";
   var tee_colour = html_id + "_colour";
+  var tname = document.getElementById(tee_name.toString()).innerText;
 
   var removeText =
     document.getElementById(tee_name.toString()).innerText +
@@ -340,6 +354,7 @@ function deleteItem(html_id) {
     .split(".")[0];
   // Remove the element
   element.remove();
+
   // subtract the price from total
   var total_price_to_pay =
     document.getElementById("total_price_to_pay").innerText;
@@ -348,7 +363,13 @@ function deleteItem(html_id) {
   document.getElementById("custom_int1").value = document
     .getElementById("custom_int1")
     .value.replace(" T-Shirt Name: " + removeText, "");
+
+  if (document.getElementById("custom_int1").value.indexOf(tname) == -1) {
+    custom_str5.value = custom_str5.value.replace(tname, "");
+  }
+
   console.log(document.getElementById("custom_int1").value);
+  console.log(tee_name + " " + custom_str5.value);
 }
 
 function generateGUID() {
