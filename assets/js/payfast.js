@@ -253,6 +253,7 @@ function rest() {
   document.getElementById("featured-cars").classList.remove("hideDivs");
   document.getElementById("clients-say").classList.remove("hideDivs");
   about.classList.add("hideDivs");
+  document.getElementById("img").classList.remove("hideDivs");
   document.getElementById("home").classList.remove("hideDivs");
   document.getElementById("contact").classList.remove("hideDivs");
   document.getElementById("blog").classList.add("hideDivs");
