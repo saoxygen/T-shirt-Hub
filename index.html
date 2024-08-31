@@ -287,6 +287,12 @@
       <div class="section-header">
         <p>T-shirt Hub</p>
         <h2>Graphic Tees</h2>
+        <br>
+        <br>
+        <p class="extra_text">All Tees are made of Cotton Lycra, a blend of cotton & lycra. <br> It has elasticity
+          features, easy to dry
+          and
+          wrinkle resistance</p>
       </div>
       <!--/.section-header-->
       <div class="featured-cars-content">
@@ -938,7 +944,7 @@
       </div>
       <div class="field-container" id="add_to_cart_div">
         <button id="add_to_cart" class="shop">ADD TO CART</button>
-        <button onclick="openCart()" class="shop">VIEW CART</button>
+        <!-- <button onclick="openCart()" class="shop">VIEW CART</button> -->
       </div>
     </div>
   </section>
@@ -958,7 +964,7 @@
         <label for="" id="total_price_to_pay">0</label>
       </div>
       <div class="main_label_div">
-        <label for="mail">Please note an additional R130 will be added as a delivery free, <a href="shipping.html">read
+        <label for="mail">Please note an additional R130 will be added as a delivery fee, <a href="shipping.html">read
             more</a> on the delivery process</label>
       </div>
       <button id="checkout" class="shop">CHECKOUT</button>
@@ -1153,14 +1159,16 @@
     </div>
     <!--/.container-->
 
-    <div id="scroll-Top">
-      <div class="return-to-top">
-        <i class="fa fa-angle-up" id="scroll-top" data-toggle="tooltip" data-placement="top" title=""
-          data-original-title="Back to Top" aria-hidden="true"></i>
-      </div>
-    </div>
+
     <!--/.scroll-Top-->
   </footer>
+
+  <div id="view-Cart" onclick="openCart()">
+    <div class="show-cart">
+      <i class="fa-solid fa-cart-shopping" id="view_cart_always"></i>
+    </div>
+  </div>
+
   <!--/.contact-->
   <!--contact end-->
 

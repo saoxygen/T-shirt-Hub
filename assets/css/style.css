@@ -190,6 +190,10 @@ body {
     text-transform: lowercase;
 }
 
+.section-header .extra_text {
+    color: #818998;
+}
+
 /* section-header */
 
 /*=============Style css=========*/
@@ -986,11 +990,11 @@ nav.navbar.bootsnav .navbar-toggle i {
 /*===============================
     Scroll Top
 ===============================*/
-#scroll-Top .return-to-top {
+#view-Cart .show-cart {
     position: fixed;
     right: 30px;
     bottom: 30px;
-    display: none;
+    display: block;
     width: 40px;
     line-height: 40px;
     height: 40px;
@@ -998,8 +1002,8 @@ nav.navbar.bootsnav .navbar-toggle i {
     font-size: 20px;
     cursor: pointer;
     color: #fff;
-    background: #444a57;
-    border: 1px solid #444a57;
+    background: #000;
+    border: 1px solid #000;
     border-radius: 50%;
     -webkit-transition: .5s;
     -moz-transition: .5s;
@@ -1009,33 +1013,34 @@ nav.navbar.bootsnav .navbar-toggle i {
     z-index: 2;
 }
 
-#scroll-Top .return-to-top:hover {
+#view-Cart .show-cart:hover {
     background: #fff;
-    color: #444a57;
-    border: 1px solid #444a57;
+    color: #000;
+    border: 1px solid #000;
 }
 
-#scroll-Top .return-to-top i {
+#view-Cart .show-cart i {
     position: relative;
     bottom: 0;
+    left: 0;
 
 }
 
-#scroll-Top .return-to-top i {
+#view-Cart .show-cart i {
     position: relative;
-    animation-name: example;
+    /* animation-name: example;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    animation-duration: 1s;
+    animation-duration: 2s; */
 }
 
 @keyframes example {
     0% {
-        bottom: 0px;
+        left: -6px;
     }
 
     100% {
-        bottom: 7px;
+        left: 6px;
     }
 }
 
