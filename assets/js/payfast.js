@@ -208,7 +208,7 @@ function pay(name_, mail, address, phone) {
   document.getElementById("custom_str1").value = "Address Provided: " + address;
   rest();
   amount.value =
-    parseInt(document.getElementById("total_price_to_pay").innerText) + 0; //130
+    parseInt(document.getElementById("total_price_to_pay").innerText) + 130; //130
   // custom_str2.value = document.getElementById("custom_int1").value;
 
   item_name.value = custom_str5.value;
