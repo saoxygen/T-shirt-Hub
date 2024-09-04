@@ -289,6 +289,7 @@ function nextStep() {
   document.getElementById("contact").classList.add("hideDivs");
   document.getElementById("blog").classList.add("hideDivs");
   payment_cart.classList.add("hideDivs");
+  document.getElementById("img").classList.add("hideDivs");
 }
 
 function rest() {

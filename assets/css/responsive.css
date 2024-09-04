@@ -50,6 +50,10 @@
 		padding: 0px 20px;
 	}
 
+	#back4 {
+		top: 50%;
+	}
+
 	nav.navbar.bootsnav .navbar-collapse.collapse.in {
 		padding-bottom: 30px;
 	}
