@@ -50,6 +50,24 @@
 		padding: 0px 20px;
 	}
 
+	.payment_cart {
+		height: 100vh;
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.payment_cart .continue_btn {
+		gap: 40px;
+	}
+
+	.payment_cart .notice label {
+		color: #818998;
+		font-weight: 400;
+	}
+
 	#back4 {
 		top: 50%;
 	}
@@ -260,3 +278,7 @@
 @media screen and (max-width: 320px) {}
 
 /*max-width:320px*/
+
+.hideDivs {
+	display: none;
+}

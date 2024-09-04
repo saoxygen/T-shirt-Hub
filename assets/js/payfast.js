@@ -29,7 +29,7 @@ checkout.addEventListener("click", function () {
   );
   var order_type = document.getElementById("delivery_type").value;
 
-  if (amount < 360) {
+  if (amount < 349) {
     alert("No Items were added to cart.");
     return;
   }
@@ -39,7 +39,7 @@ checkout.addEventListener("click", function () {
     return;
   }
 
-  if (amount > 369 && !empty(order_type)) {
+  if (amount > 349 && !empty(order_type)) {
     nextStep();
     payment_div.classList.remove("hideDivs");
   }
@@ -313,6 +313,7 @@ function openCart() {
   document.getElementById("nav_section").classList.add("hideDivs");
   document.getElementById("img").classList.add("hideDivs");
   document.getElementById("home").classList.add("hideDivs");
+  document.getElementById("payment_cart").classList.remove("hideDivs");
 }
 
 function openAbout() {
