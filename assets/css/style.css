@@ -1175,6 +1175,10 @@ nav.navbar.bootsnav .navbar-toggle i {
 }
 
 .form-container2 .field-container:nth-of-type(4) {
+    grid-area: city;
+}
+
+.form-container2 .field-container:nth-of-type(5) {
     grid-area: cart;
 }
 
@@ -1183,10 +1187,16 @@ nav.navbar.bootsnav .navbar-toggle i {
     grid-column-gap: 10px;
     grid-template-columns: auto auto;
     grid-template-rows: 90px 90px 90px 90px;
-    grid-template-areas: "t t" "size size" "colour colour" "cart cart";
+    grid-template-areas: "t t" "size size" "colour colour" "city city" "cart cart";
     max-width: 400px;
     padding: 20px;
     color: #707070;
+}
+
+#add_to_cart_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 label {
@@ -1497,6 +1507,10 @@ form,
     flex-direction: column;
 }
 
+#payment_cart .continue_btn {
+    gap: 20px;
+}
+
 #back,
 #back2,
 #back3,
@@ -1532,13 +1546,15 @@ form,
     justify-content: center;
 }
 
-#blog label {
+#blog label,
+#payment_cart label {
     margin: 0px;
     padding: 0px;
 
 }
 
-#blog select {
+#blog select,
+#payment_cart select {
     margin-left: 20px;
 
 }
@@ -1590,6 +1606,11 @@ form,
     height: 20px;
     width: 20px;
     margin-left: 10px;
+}
+
+#city {
+    max-width: 150px;
+    margin-left: 20px;
 }
 
 .notification {

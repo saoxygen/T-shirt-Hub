@@ -24,8 +24,25 @@ var back4 = document.getElementById("back4");
 var purchase_img = document.getElementById("purchase_img");
 
 checkout.addEventListener("click", function () {
-  nextStep();
-  payment_div.classList.remove("hideDivs");
+  var amount = parseInt(
+    document.getElementById("total_price_to_pay").innerText
+  );
+  var order_type = document.getElementById("delivery_type").value;
+
+  if (amount < 360) {
+    alert("No Items were added to cart.");
+    return;
+  }
+
+  if (empty(order_type)) {
+    alert("Select an order type before checking out.");
+    return;
+  }
+
+  if (amount > 369 && !empty(order_type)) {
+    nextStep();
+    payment_div.classList.remove("hideDivs");
+  }
 });
 
 origin.addEventListener("click", function () {
@@ -180,7 +197,8 @@ add_to_cart.addEventListener("click", function () {
       " T-Shirt Colour: " +
       t_colour_Value +
       " Price: " +
-      amount.value;
+      amount.value +
+      city_info;
     t_size.value = "";
     t_colour.value = "";
     const shop_nav_btn = document.getElementById("shop_nav_btn");
@@ -218,13 +236,23 @@ function pay(name_, mail, address, phone) {
     return;
   }
 
+  var delivery_type = document.getElementById("delivery_type").value;
+
   document.getElementById("confirmation_address").value =
     "tshirthub419@gmail.com";
   document.getElementById("email_address").value = mail; //customer
-  document.getElementById("custom_str1").value = "Address Provided: " + address;
+  document.getElementById("custom_str1").value =
+    "Address Provided: " + address + " / " + delivery_type;
   rest();
+  var delivery_fee = 0;
+
+  if (delivery_type == "Delivery") {
+    delivery_fee = 130;
+  }
+
   amount.value =
-    parseInt(document.getElementById("total_price_to_pay").innerText) + 130; //130
+    parseInt(document.getElementById("total_price_to_pay").innerText) +
+    delivery_fee; //130
   // custom_str2.value = document.getElementById("custom_int1").value;
 
   item_name.value = custom_str5.value;

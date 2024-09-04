@@ -313,7 +313,6 @@
                   <h3 id="origin_price">R370.00</h3>
                   <!-- R370.00 -->
                   <button id="origin" class="shop">ADD TO CART</button>
-
                 </div>
               </div>
             </div>
@@ -946,7 +945,7 @@
       </div>
       <div class="field-container hideDivs" id="city_t">
         <div class="main_label_div">
-          <label for="mail">Select your city:</label>
+          <label for="mail">City:</label>
           <input list="cities" id="city" name="city">
           <datalist id="cities">
             <option value="Bloemfontein">
@@ -982,7 +981,7 @@
       </div>
     </div>
   </section>
-  <section class="payment_cart hideDivs" id="payment_cart">
+  <section class="payment_cart" id="payment_cart">
     <div class="payment-title">
       <span id="back2" class="material-symbols-outlined">
         arrow_back
@@ -997,9 +996,19 @@
         <label for="mail">Total Amout to be Paid: R</label>
         <label for="" id="total_price_to_pay">0</label>
       </div>
+        <div class="main_label_div">
+          <label for="mail">Order Type:</label>
+          <select name="T-Shirt Delivery" id="delivery_type">
+            <option value=""></option>
+            <option value="Delivery">Delivery</option>
+            <option value="Collection">Collection</option>
+          </select>
+        </div>
       <div class="main_label_div">
         <label for="mail">Please note an additional R130 will be added as a delivery fee, <a href="shipping.html">read
             more</a> on the delivery process</label>
+            <br>
+            <label for="">Collection orders will not be charged a delivery fee.</label>
       </div>
       <button id="checkout" class="shop">CHECKOUT</button>
     </div>
