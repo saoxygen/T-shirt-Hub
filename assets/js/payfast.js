@@ -34,6 +34,7 @@ origin.addEventListener("click", function () {
   var origin_name = document.getElementById("origin_name").innerText;
   var origin_price = document.getElementById("origin_price").innerText;
   document.getElementById("colour_t").classList.remove("hideDivs");
+  document.getElementById("city_t").classList.remove("hideDivs");
   amount.value = origin_price.substring(1);
   item_name.value = origin_name;
 
@@ -119,14 +120,27 @@ add_to_cart.addEventListener("click", function () {
   var t_size_selectedValue = t_size.value;
   var t_colour = document.getElementById("T-Shirt-Colour");
   var t_colour_Value = t_colour.value;
+  var city_t_value = document.getElementById("city").value;
+  var city_info = "";
 
   var colour_t_class = Array.from(
     document.getElementById("colour_t").classList
   );
 
+  var city_t_class = Array.from(document.getElementById("city_t").classList);
+
   if (empty(t_colour_Value) && colour_t_class.indexOf("hideDivs") == -1) {
     alert("Select a T-shirt colour before Adding To Cart");
     return;
+  }
+
+  if (empty(city_t_value) && city_t_class.indexOf("hideDivs") == -1) {
+    alert("Select a City before Adding To Cart");
+    return;
+  } else if (empty(city_t_value) && city_t_class.indexOf("hideDivs") != -1) {
+    city_info = "";
+  } else {
+    city_info = " City: " + city_t_value;
   }
 
   if (empty(t_colour_Value) && colour_t_class.indexOf("hideDivs") == 1) {
@@ -145,7 +159,8 @@ add_to_cart.addEventListener("click", function () {
       " Colour:  " +
       t_colour_Value +
       " Size: " +
-      t_size_selectedValue;
+      t_size_selectedValue +
+      city_info;
     rest();
     document.getElementById("blog").classList.add("hideDivs");
     add_item_to_cart(
@@ -153,7 +168,8 @@ add_to_cart.addEventListener("click", function () {
       amount.value,
       t_size_selectedValue,
       t_colour_Value,
-      name_
+      name_,
+      city_info
     );
 
     document.getElementById("custom_int1").value +=
@@ -237,6 +253,7 @@ function pay(name_, mail, address, phone) {
 function nextStep() {
   payment_div.classList.add("hideDivs");
   document.getElementById("colour_t").classList.add("hideDivs");
+  document.getElementById("city_t").classList.add("hideDivs");
   document.getElementById("featured-cars").classList.add("hideDivs");
   document.getElementById("clients-say").classList.add("hideDivs");
   document.getElementById("about").classList.add("hideDivs");
@@ -249,6 +266,7 @@ function nextStep() {
 function rest() {
   payment_div.classList.add("hideDivs");
   document.getElementById("colour_t").classList.add("hideDivs");
+  document.getElementById("city_t").classList.add("hideDivs");
   document.getElementById("payment_cart").classList.add("hideDivs");
   document.getElementById("featured-cars").classList.remove("hideDivs");
   document.getElementById("clients-say").classList.remove("hideDivs");
@@ -274,8 +292,21 @@ function openAbout() {
   document.getElementById("nav_section").classList.add("hideDivs");
 }
 
-function add_item_to_cart(src, price, size, colour, name) {
+function add_item_to_cart(src, price, size, colour, name, city_info) {
   var html_id = generateGUID();
+  var city_html = ``;
+  if (!empty(city_info)) {
+    city_html =
+      `<h3
+        id="` +
+      html_id +
+      `_city"
+      >
+        ` +
+      city_info +
+      `
+      </h3>`;
+  }
 
   document.getElementById("cart_items").innerHTML +=
     `
@@ -295,7 +326,9 @@ function add_item_to_cart(src, price, size, colour, name) {
     html_id +
     `_name">` +
     name +
-    `</a></h2>
+    `</a></h2> ` +
+    city_html +
+    `
             <h3 id="` +
     html_id +
     `_size">T-shirt size: ` +
@@ -330,6 +363,7 @@ function add_item_to_cart(src, price, size, colour, name) {
   document.getElementById(
     "notification_symbol"
   ).innerHTML = `<i class="fa-solid fa-circle-check"></i>`;
+  document.getElementById("city").value = "";
 }
 
 function deleteItem(html_id) {
